@@ -1,3 +1,6 @@
+# Dictionary App 
+Dictionary App is one of the apps that can be made to test out React skills before upgrading ourselves from a beginner to an intermediate level in terms of handling API calls and Handling React Components.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
