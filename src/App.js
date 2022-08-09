@@ -1,4 +1,4 @@
-import './App.css';
+//import './App.css';
 import React, { useState, useEffect } from "react";
 
 const App = () => {
@@ -33,25 +33,31 @@ const App = () => {
     <>
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-12 text-center fw-bold fs-1 p-3 bg-success text-white'>
-            Pocket Dictionary
+          <div className='container-main-title col-12 text-center fw-bold fs-1 p-3 text-white'>
+            <h1 className="main-title">Pocket Dictionary</h1>
           </div>
-          <div className='form-floating bg-primary py-3 pb-5 d-flex justify-content-center'>
+          
+          <div className='container-search form-floating py-3 pb-5 d-flex justify-content-center'>
             <input
               type="text"
-              className="form-control-sm border-0 px-2 col-md-3 col-sm-4"
+              className="form-control-sm border-0 px-2 col-md-5 col-sm-4"
               placeholder="Type your word"
               id="floatingInput"
               />
-              <button className="btn btn-dark text-ligth col-md-1 col-sm-2 mx-2">
+              <button className="btn btn-dark text-light col-md-1 col-sm-2 mx-2" 
+                onClick={Search}>
                 Search
               </button>
-            <div className="fs-1 text-capitalize text-center fw-bold text-decoration-underline text-white bg-dark extra">
-              You can search in the BOX!
-            </div>
           </div>
         </div>
       </div>
+      {word === "" ? (
+        "Hello"
+      ) : (
+        <div className="container-text-box fs-1 text-capitalize text-center fw-bold text-white extra">
+          <h2 className="subtitle">You can search in the BOX!</h2>
+        </div>
+      )}
     </>
   );
 };

@@ -1,9 +1,39 @@
-body {
-  margin: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+.dark-theme{
+  color: white;
+  background-color: #000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.li {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+}
+
+.main-title, .subtitle {
+  font-family:'Comfortaa';
+}
+
+.container-main-title, .container-search {
+  background:#EF4531;
+}
+
+.container-text-box {
+  background:#0064FA
+}
+
+.extra { /*Container with Text (You can Search in the BOX!)*/
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+@media (min-width: 300px) and (max-width: 575px) {
+  .li {
+    display: grid;
+    grid-template-columns: auto auto;
+
+  }
 }
