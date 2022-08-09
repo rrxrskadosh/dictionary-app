@@ -1,5 +1,5 @@
 # Dictionary App 
-Dictionary App is one of the apps that can be made to test out React skills before upgrading ourselves from a beginner to an intermediate level in terms of handling API calls and Handling React Components.
+In this app, make a Dictionary App that will contain meanings, examples, synonyms, and antonyms with the pronunciation of the searched word through an API.
 
 # Getting Started with Create React App
 
