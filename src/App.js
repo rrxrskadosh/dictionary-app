@@ -1,9 +1,10 @@
 //import './App.css';
 import React, { useState, useEffect } from "react";
-
+import Select from "./components/Select";
 const App = () => {
   const [word, setWord] = useState();
   const [mean, setMean] = useState([]);
+  const [all, setAll] = useState([])
   const [main, setMain] = useState([]);
   const [audio, setAudio] = useState();
 
@@ -43,6 +44,8 @@ const App = () => {
               className="form-control-sm border-0 px-2 col-md-5 col-sm-4"
               placeholder="Type your word"
               id="floatingInput"
+              value={word}
+              onChange={(e) => setWord(e.target.value)}
               />
               <button className="btn btn-dark text-light col-md-1 col-sm-2 mx-2" 
                 onClick={Search}>
@@ -52,7 +55,7 @@ const App = () => {
         </div>
       </div>
       {word === "" ? (
-        "Hello"
+        <Select all={all} main={main} />
       ) : (
         <div className="container-text-box fs-1 text-capitalize text-center fw-bold text-white extra">
           <h2 className="subtitle">You can search in the BOX!</h2>
