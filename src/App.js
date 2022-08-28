@@ -1,10 +1,9 @@
 //import './App.css';
 import React, { useState, useEffect } from "react";
-import Select from "./components/Select";
+import Definition from "./components/Definition";
 const App = () => {
   const [word, setWord] = useState();
   const [mean, setMean] = useState([]);
-  const [all, setAll] = useState([])
   const [main, setMain] = useState([]);
   const [audio, setAudio] = useState();
 
@@ -55,7 +54,7 @@ const App = () => {
         </div>
       </div>
       {word === "" ? (
-        <Select all={all} main={main} />
+        <Definition mean={mean} main={main} audio={audio}/>
       ) : (
         <div className="container-text-box fs-1 text-capitalize text-center fw-bold text-white extra">
           <h2 className="subtitle">You can search in the BOX!</h2>
